@@ -1,0 +1,111 @@
+.modal-container{
+   height: 100vh;
+   width: 100%;
+   background: rgba(0,0,0,.5);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 2000;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+   /* display: flex;  para animação*/
+   display: none;
+}
+
+.modal-container.ativo {
+   display: flex;
+ }
+.modal{
+   
+   margin: 0;
+   background: white;
+   min-width: 300px;
+   padding: 110px;
+   border: 15px solid #33A1FD;
+   box-shadow: 0 0 0 10px white;
+   position: absolute;
+   
+   
+}
+
+/* Animação */
+
+@keyframes modal {
+   from {
+     opacity: 0;
+     transform: translate3d(0, -30px, 0);
+   }
+   to {
+     opacity: 1;
+     transform: translate3d(0, 0, 0);
+   }
+ }
+
+/* Adicionar a animação */
+.ativo .modal {
+   animation: modal .3s forwards;
+ }
+
+
+
+
+               /* X */
+.fechar{
+   width: 70px;
+   height: 70px;
+   border-radius: 50px;
+   border: 10px solid #FDCA40;
+   top: -40px;
+   right: -40px;
+   position: absolute;
+   box-shadow: 0 6px 5px 0 rgba(0,0,0,.3);
+   font-size: 2rem;
+   color: #33A1FD;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,monospace;
+   cursor: pointer;
+   background: white;
+
+
+}
+
+
+.modal label{
+
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,monospace;
+   display: block;
+   font-weight: bold;
+   margin: 1rem 0 .5rem 0;
+   font-size: 1.3rem
+
+
+}
+.modal input{
+   width: 100%;
+   padding: 1rem .9rem;
+   box-sizing: border-box;
+}
+
+/* Botão login */
+.modal button[type="submit"]{
+   
+   display: block;
+
+   background: #FDCA40;
+   border: none;
+   border-radius: 9px;
+   padding: .8rem 8rem;
+   color: white;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,monospace;
+
+   margin-top: 2.5rem;
+   font-weight: bold;
+   font-size: 1.2rem;
+   cursor: pointer;
+
+
+
+}
+.login{
+   font-size: 4rem;
+}
